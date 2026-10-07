@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox Lab | Tailwind CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            FLEX<span>LAB</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">Flexbox</a></li>
+            <li><a href="#direction">Direction</a></li>
+            <li><a href="#justify">Justify</a></li>
+            <li><a href="#align">Align</a></li>
+            <li><a href="#items">Items</a></li>
+            <li><a href="#practice">Practice</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">TAILWIND CSS PRESENTATION</p>
+
+            <h1>
+                Master
+                <span>Flexbox</span>
+            </h1>
+
+            <p class="hero-text">
+                Learn how Flexbox works and how Tailwind CSS
+                makes modern layouts easier, faster and more responsive.
+            </p>
+
+            <a href="#intro" class="hero-button">
+                Start Learning →
+            </a>
+
+        </div>
+
+
+        <div class="code-window">
+
+            <div class="window-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="code-content">
+
+                <p>
+                    &lt;div class="<green>flex</green>
+                </p>
+
+                <p class="indent">
+                    <purple>items-center</purple>
+                </p>
+
+                <p class="indent">
+                    <purple>justify-between</purple>
+                </p>
+
+                <p class="indent">
+                    <purple>gap-4</purple>"&gt;
+                </p>
+
+                <p class="indent">
+                    &lt;div&gt;Item 1&lt;/div&gt;
+                </p>
+
+                <p class="indent">
+                    &lt;div&gt;Item 2&lt;/div&gt;
+                </p>
+
+                <p>
+                    &lt;/div&gt;
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section id="intro">
+
+            <p class="section-number">01 — FOUNDATION</p>
+
+            <h2>What is Flexbox?</h2>
+
+            <p class="section-description">
+                Flexbox is a CSS layout system designed to arrange
+                elements in one dimension: either a row or a column.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="icon">01</div>
+
+                    <h3>Flex Container</h3>
+
+                    <p>
+                        The parent element that receives
+                        <strong>display: flex</strong>.
+                    </p>
+
+                    <div class="code-box">
+                        display: flex;
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icon">02</div>
+
+                    <h3>Flex Items</h3>
+
+                    <p>
+                        The direct children of a Flex Container
+                        become Flex Items.
+                    </p>
+
+                    <div class="code-box">
+                        flex items
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icon">03</div>
+
+                    <h3>One Dimension</h3>
+
+
+ <p>
+                        Flexbox works mainly on one axis at a time:
+                        horizontal or vertical.
+                    </p>
+
+                    <div class="code-box">
+                        row / column
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="important">
+
+                <strong>Important:</strong>
+
+                Flexbox is excellent for one-dimensional layouts.
+                CSS Grid is generally better when you need
+                two-dimensional layouts.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= AXIS ================= -->
+
+        <section>
+
+            <p class="section-number">02 — THE AXES</p>
+
+            <h2>Main Axis & Cross Axis</h2>
+
+            <p class="section-description">
+                Understanding the two axes is one of the most
+                important concepts in Flexbox.
+            </p>
+
+
+            <div class="axis-container">
+
+                <div class="axis-box">
+
+                    <div class="axis-arrow">
+                        MAIN AXIS →
+                    </div>
+
+                    <div class="axis-items">
+
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="axis-info">
+
+                    <h3>Main Axis</h3>
+
+                    <p>
+                        The main axis is determined by
+                        <strong>flex-direction</strong>.
+                    </p>
+
+                    <p>
+                        With <strong>flex-row</strong>,
+                        the main axis is horizontal.
+                    </p>
+
+                    <p>
+                        With <strong>flex-col</strong>,
+                        the main axis becomes vertical.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= DIRECTION ================= -->
+
+        <section id="direction">
+
+            <p class="section-number">03 — DIRECTION</p>
+
+            <h2>Flex Direction</h2>
+
+            <p class="section-description">
+                Flex direction controls the direction in which
+                Flex Items are placed.
+            </p>
+
+
+            <div class="direction-grid">
+
+                <div class="demo-card">
+
+                    <h3>flex-row</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-row
+                    </div>
+
+                    <div class="demo flex-row">
+
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+
+                    </div>
+
+                    <p>
+                        Default direction. Items are placed
+                        from left to right.
+                    </p>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>flex-col</h3>
+
+                    <div class="tailwind-code">
+                           flex flex-col
+                    </div>
+
+                    <div class="demo flex-col">
+
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+
+                    </div>
+
+                    <p>
+                        Items are placed vertically.
+                    </p>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>flex-row-reverse</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-row-reverse
+                    </div>
+
+                    <div class="demo flex-row-reverse">
+
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+
+                    </div>
+
+                    <p>
+                        Reverses the horizontal direction.
+                    </p>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>flex-col-reverse</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-col-reverse
+                    </div>
+
+                    <div class="demo flex-col-reverse">
+
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+
+                    </div>
+
+                    <p>
+                        Reverses the vertical direction.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= JUSTIFY ================= -->
+
+        <section id="justify">
+
+            <p class="section-number">04 — MAIN AXIS</p>
+
+            <h2>Justify Content</h2>
+
+            <p class="section-description">
+                The <strong>justify-*</strong> utilities control
+                the position of items along the main axis.
+            </p>
+
+
+            <div class="justify-grid">
+
+                <div class="demo-card">
+
+                    <h3>justify-start</h3>
+
+                    <div class="tailwind-code">
+                        justify-start
+                    </div>
+
+                    <div class="demo justify-start">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>justify-center</h3>
+
+                    <div class="tailwind-code">
+                        justify-center
+                    </div>
+
+                    <div class="demo justify-center">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>justify-end</h3>
+
+                    <div class="tailwind-code">
+                        justify-end
+                    </div>
+
+                    <div class="demo justify-end">
+                        <div>A</div>
+                        <div>B</div>
+                    <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>justify-between</h3>
+
+                    <div class="tailwind-code">
+                        justify-between
+                    </div>
+
+                    <div class="demo justify-between">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>justify-around</h3>
+
+                    <div class="tailwind-code">
+                        justify-around
+                    </div>
+
+                    <div class="demo justify-around">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>justify-evenly</h3>
+
+                    <div class="tailwind-code">
+                        justify-evenly
+                    </div>
+
+                    <div class="demo justify-evenly">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ALIGN ================= -->
+
+        <section id="align">
+
+            <p class="section-number">05 — CROSS AXIS</p>
+
+            <h2>Align Items</h2>
+
+            <p class="section-description">
+                The <strong>items-*</strong> utilities control
+                the position of items on the cross axis.
+            </p>
+
+
+            <div class="align-grid">
+
+                <div class="demo-card">
+
+                    <h3>items-start</h3>
+
+                    <div class="tailwind-code">
+                        items-start
+                    </div>
+
+                    <div class="demo tall items-start">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>items-center</h3>
+
+                    <div class="tailwind-code">
+                        items-center
+                    </div>
+
+                    <div class="demo tall items-center">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+
+                    <h3>items-end</h3>
+
+                    <div class="tailwind-code">
+                        items-end
+                    </div>
+
+                    <div class="demo tall items-end">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+
+                <div class="demo-card">
+ <h3>items-stretch</h3>
+
+                    <div class="tailwind-code">
+                        items-stretch
+                    </div>
+
+                    <div class="demo tall items-stretch">
+                        <div>A</div>
+                        <div>B</div>
+                        <div>C</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="important">
+
+                <strong>Common pattern:</strong>
+
+                flex items-center justify-center
+
+                <br>
+
+                This is commonly used to center an element
+                horizontally and vertically.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= GAP ================= -->
+
+        <section>
+
+            <p class="section-number">06 — SPACING</p>
+
+            <h2>Gap</h2>
+
+            <p class="section-description">
+                Tailwind provides simple utilities for creating
+                consistent space between Flex Items.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>gap-2</h3>
+
+                    <div class="tailwind-code">
+                        flex gap-2
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>gap-4</h3>
+
+                    <div class="tailwind-code">
+                        flex gap-4
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>gap-8</h3>
+
+                    <div class="tailwind-code">
+                        flex gap-8
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="demo gap-demo">
+
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WRAP ================= -->
+
+        <section>
+
+            <p class="section-number">07 — WRAPPING</p>
+
+            <h2>Flex Wrap</h2>
+
+            <p class="section-description">
+                When there isn't enough horizontal space,
+                flex-wrap allows items to move onto a new line.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>flex-wrap</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-wrap
+                    </div>
+
+                    <p>
+                        Items can move to another line when
+                        there is not enough space.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>flex-nowrap</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-nowrap
+                    </div>
+
+                    <p>
+                        Items remain on one line.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>flex-wrap-reverse</h3>
+
+               <div class="tailwind-code">
+                        flex flex-wrap-reverse
+                    </div>
+
+                    <p>
+                        Wraps items in the reverse cross-axis direction.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CHILDREN ================= -->
+
+        <section id="items">
+
+            <p class="section-number">08 — FLEX ITEMS</p>
+
+            <h2>Controlling Flex Items</h2>
+
+            <p class="section-description">
+                Tailwind also gives us utilities to control
+                individual Flex Items.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>flex-1</h3>
+
+                    <p>
+                        Allows an item to grow and fill available space.
+                    </p>
+
+                    <div class="tailwind-code">
+                        flex-1
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>grow</h3>
+
+                    <p>
+                        Allows a Flex Item to grow when extra
+                        space is available.
+                    </p>
+
+                    <div class="tailwind-code">
+                        grow
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>shrink</h3>
+
+                    <p>
+                        Allows an item to shrink when necessary.
+                    </p>
+
+                    <div class="tailwind-code">
+                        shrink
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>basis</h3>
+
+                    <p>
+                        Defines the initial size of a Flex Item.
+                    </p>
+
+                    <div class="tailwind-code">
+                        basis-1/2
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>order</h3>
+
+                    <p>
+                        Changes the visual order of Flex Items.
+                    </p>
+
+                    <div class="tailwind-code">
+                        order-1
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>self</h3>
+
+                    <p>
+                        Controls alignment of one individual item.
+                    </p>
+
+                    <div class="tailwind-code">
+                        self-center
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESPONSIVE ================= -->
+
+        <section>
+
+            <p class="section-number">09 — RESPONSIVE</p>
+
+            <h2>Responsive Flexbox</h2>
+
+            <p class="section-description">
+                One of the strongest features of Tailwind is
+                responsive utility classes.
+            </p>
+
+<div class="responsive-example">
+
+                <div>
+
+                    <h3>Mobile → Column</h3>
+
+                    <div class="tailwind-code">
+                        flex flex-col md:flex-row
+                    </div>
+
+                    <p>
+                        On small screens the items are displayed
+                        vertically. From the medium breakpoint,
+                        they become a row.
+                    </p>
+
+                </div>
+
+
+                <div class="responsive-demo">
+
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JavaScript</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="breakpoints">
+
+                <div>
+                    <strong>sm:</strong>
+                    Small screens
+                </div>
+
+                <div>
+                    <strong>md:</strong>
+                    Medium screens
+                </div>
+
+                <div>
+                    <strong>lg:</strong>
+                    Large screens
+                </div>
+
+                <div>
+                    <strong>xl:</strong>
+                    Extra large
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= INTERACTIVE ================= -->
+
+        <section id="practice">
+
+            <p class="section-number">10 — PRACTICE</p>
+
+            <h2>Try Flexbox Yourself</h2>
+
+            <p class="section-description">
+                Click the buttons and see how
+                justify-content changes the layout.
+            </p>
+
+
+            <div class="playground">
+
+                <div class="playground-box" id="playground">
+
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JS</div>
+
+                </div>
+
+
+                <div class="controls">
+
+                    <button onclick="changeLayout('start')">
+                        Start
+                    </button>
+
+                    <button onclick="changeLayout('center')">
+                        Center
+                    </button>
+
+                    <button onclick="changeLayout('end')">
+                        End
+                    </button>
+
+                    <button onclick="changeLayout('between')">
+                        Between
+                    </button>
+
+                    <button onclick="changeLayout('around')">
+                        Around
+                    </button>
+
+                    <button onclick="changeLayout('evenly')">
+                        Evenly
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <section>
+
+            <p class="section-number">11 — SUMMARY</p>
+
+            <h2>What should you remember?</h2>
+
+
+            <div class="summary">
+
+                <div>
+                    <span>01</span>
+                    <p><strong>flex</strong> activates Flexbox.</p>
+                </div>
+
+                <div>
+               <span>02</span>
+                    <p><strong>flex-row / flex-col</strong> control direction.</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <p><strong>justify-*</strong> controls the main axis.</p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <p><strong>items-*</strong> controls the cross axis.</p>
+                </div>
+
+                <div>
+                    <span>05</span>
+                    <p><strong>gap-*</strong> creates space between items.</p>
+                </div>
+
+                <div>
+                    <span>06</span>
+                    <p><strong>flex-wrap</strong> allows items to wrap.</p>
+                </div>
+
+                <div>
+                    <span>07</span>
+                    <p><strong>flex-1, grow, shrink</strong> control item size.</p>
+                </div>
+
+                <div>
+                    <span>08</span>
+                    <p><strong>responsive prefixes</strong> create responsive layouts.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <h3>FLEX<span>LAB</span></h3>
+
+        <p>
+            A presentation website about Flexbox
+            with Tailwind CSS.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+                 
+
+                 
+
+                 
+                 
+                 
